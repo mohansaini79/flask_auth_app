@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import os
 import re  # ✅ For regex validations
 
-app = Flask(__name__
+app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', 'supersecretkey') # Replace this with an environment variable in production
 # MongoDB config
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
