@@ -7,9 +7,9 @@ import re  # ✅ For regex validations
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'  # Replace this with an environment variable in production
-
 # MongoDB config
-app.config["MONGO_URI"] = "mongodb+srv://Mohan:M.s12345@mohan.bnwereo.mongodb.net/Mohan?retryWrites=true&w=majority&appName=Mohan"
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+
 mongo = PyMongo(app)
 
 # Home Route
